@@ -1,1 +1,1 @@
-## A repo containing some of my .dotfiles config
+## A repo containing my .dotfiles config
