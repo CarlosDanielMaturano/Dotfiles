@@ -1,0 +1,33 @@
+[include]
+  path = ~/.gitthemes.gitconfig
+
+[user]
+	name = CarlosDanielMaturano
+	email = carlosdanielmaturano@proton.me
+[credential]
+	helper = cache --timeout 3600
+[core]
+  editor = nvim
+[difftool]
+    prompt = true
+[diff]
+    tool = nvimdiff
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[core]
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true    
+    light = false     
+    line-numbers = true
+    side-by-side = true
+    features = gruvmax-fang
+[merge]
+    conflictstyle = diff3
+[diff]
+    colorMoved = default
+
+[alias]
+	s = status
