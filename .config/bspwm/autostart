@@ -1,0 +1,11 @@
+#! /bin/sh
+
+# Nitrogen
+nitrogen --restore & 
+
+# Init picom
+picom --config ~/.config/picom.conf & 
+
+# Init polybar 
+polybar main -c ~/.config/polybar/config.ini & 
+

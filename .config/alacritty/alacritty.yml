@@ -10,7 +10,7 @@ font:
     weight: 600
 
 env:
-  TERM: alacritty
+  TERM: "xterm-256color"
 
 window:
   opacity: 1
