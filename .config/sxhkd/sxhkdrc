@@ -16,6 +16,9 @@ super + c
 super + u 
   thunar
 
+Scroll_Lock
+  $HOME/.scripts/ledtoggle
+
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -44,7 +47,7 @@ super + alt + {q,r}
 
 # close and kill
 super + q
-	bspc node -{c,k}
+	bspc node -c
 
 # alternate between the tiled and monocle layout
 super + m
