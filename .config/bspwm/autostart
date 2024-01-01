@@ -3,9 +3,13 @@
 # Nitrogen
 nitrogen --restore & 
 
+#Feh 
+#feh --bg-max --randomize ~/Imagens/Wallpapers/Ruins/
+
 # Init picom
 picom --config ~/.config/picom.conf & 
 
 # Init polybar 
+killall polybar
 polybar main -c ~/.config/polybar/config.ini & 
 

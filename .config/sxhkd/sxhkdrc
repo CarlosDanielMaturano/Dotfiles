@@ -6,16 +6,29 @@ super + Return
 super + f 
   firefox
 
+# Nitrogen
+super + n
+  nitrogen ~/Wallpapers
+
 # program launcher
 super + d
   rofi -show drun -theme gruvbox-dark
-
+# Rofi commands
 super + c
   rofi -show run -theme gruvbox-dark
-
-super + u 
+# File explorar
+super + o
   thunar
 
+# Xournal
+super + x
+  xournalpp
+
+# Zathura
+super + z
+  zathura
+
+# Led toggle
 Scroll_Lock
   $HOME/.scripts/ledtoggle
 
@@ -33,10 +46,18 @@ XF86AudioMute
 
 # Scrennshot
 Print
-  scrot -s -q 100 --line mode=edge ~/Imagens/Screenshots/%Y-%m-%d_%H%M%S.png -e 'xclip -selection clipboard -t image/png -i $f'
+  scrot -s -q 100 -z --line mode=edge,width=4,color="orange" ~/Imagens/Screenshots/%Y-%m-%d_%H%M%S.png -e 'xclip -selection clipboard -t image/png -i $f'
+
+super + Print
+  scrot -q 100 -z ~/Imagens/Screenshots/%Y-%m-%d_%H%M%S.png -e 'xclip -selection clipboard -t image/png -i $f'
 
 shift + Print
-  scrot -q 100 ~/Imagens/Screenshots/%Y-%m-%d_%H%M%S.png -e 'xclip -selection clipboard -t image/png -i $f'
+  scrot -q 100 -u -z ~/Imagens/Screenshots/%Y-%m-%d_%H%M%S.png -e 'xclip -selection clipboard -t image/png -i $f'
+
+# Calcultator
+super + F7 
+  qalculate
+
 #
 # bspwm hotkeys
 #
@@ -142,3 +163,4 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+

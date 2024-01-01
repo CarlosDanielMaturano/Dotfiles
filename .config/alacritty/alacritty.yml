@@ -3,7 +3,7 @@ font:
     family: FiraMono Nerd Font Mono
     style: medium
 
-  size: 14
+  size: 15
 
   bold:
     family: FiraMono Nerd Font Mono
@@ -14,11 +14,10 @@ env:
 
 window:
   opacity: 1
-  title: "Hacking"
-  dynamic_title: false
+  #title: "Hacking"
+  #dynamic_title: false
 
 draw_bold_text_with_bright_colors: false
-
 use_thin_strokes: false
 import:
   - ~/.config/alacritty/gurber-dark.yml

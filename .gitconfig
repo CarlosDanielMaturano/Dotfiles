@@ -8,9 +8,11 @@
 	helper = cache --timeout 3600
 [core]
   editor = nvim
+  pager = batcat
 [difftool]
     prompt = true
 [diff]
+    colorMoved = default
     tool = nvimdiff
 [difftool "nvimdiff"]
     cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
@@ -25,9 +27,9 @@
     side-by-side = true
     features = gruvmax-fang
 [merge]
-    conflictstyle = diff3
-[diff]
-    colorMoved = default
-
+  conflictstyle = diff3
+  tool = vimdiff
 [alias]
-	s = status
+  s = status
+[mergetool "nvimdiff"]
+    layout = LOCAL,MERGED,REMOTE
