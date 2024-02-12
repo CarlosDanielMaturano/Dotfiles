@@ -7,8 +7,8 @@
 [credential]
 	helper = cache --timeout 3600
 [core]
-  editor = nvim
-  pager = batcat
+    editor = nvim
+    pager = batcat
 [difftool]
     prompt = true
 [diff]
@@ -26,10 +26,13 @@
     line-numbers = true
     side-by-side = true
     features = gruvmax-fang
+[mergetool "nvim"]
+    cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
 [merge]
-  conflictstyle = diff3
-  tool = vimdiff
+    tool = nvim
+[mergetool]
+    prompt = false
+    keepBackup = false 
 [alias]
-  s = status
-[mergetool "nvimdiff"]
-    layout = LOCAL,MERGED,REMOTE
+    s = status
+
