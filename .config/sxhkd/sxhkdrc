@@ -38,29 +38,36 @@ Scroll_Lock
 
 # make sxhkd reload its configuration files:
 super + Escape
-	pkill -USR1 -x sxhkd
+    pkill -USR1 -x sxhkd
 
 # Volume 
-XF86AudioLowerVolume
+#XF86AudioLowerVolume
+super + minus
 	amixer set Master 5%-
-XF86AudioRaiseVolume
-	amixer set Master 5%+
-XF86AudioMute
+#XF86AudioRaiseVolume
+super + equal
+    amixer set Master 5%+
+#XF86AudioMute
+super + 0 
         amixer set Master toggle
 
 # Scrennshot
-Print
-  scrot -s -q 100 -z --line mode=edge,width=4,color="orange" ~/Imagens/Screenshots/%Y-%m-%d_%H%M%S.png -e 'xclip -selection clipboard -t image/png -i $f'
+super + s 
+  scrot -s /tmp/%Y-%m-%d_%H%M%S.png -q 100 -z --line mode=edge,width=4,color="orange" -e 'xclip -selection clipboard -t image/png -i $f'
 
-super + Print
+super + shift + s
   scrot -q 100 -z ~/Imagens/Screenshots/%Y-%m-%d_%H%M%S.png -e 'xclip -selection clipboard -t image/png -i $f'
 
-shift + Print
+alt + s
   scrot -q 100 -u -z ~/Imagens/Screenshots/%Y-%m-%d_%H%M%S.png -e 'xclip -selection clipboard -t image/png -i $f'
 
 # Calcultator
-super + F7 
+super + u
   qalculate
+
+super + shift + k 
+    $HOME/.scripts/keyboardtoggle
+
 
 #
 # bspwm hotkeys
@@ -79,8 +86,6 @@ super + m
 	bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
-super + y
-	bspc node newest.marked.local -n newest.!automatic.local
 
 # swap the current node and the biggest window
 super + g

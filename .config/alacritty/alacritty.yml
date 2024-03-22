@@ -3,7 +3,7 @@ font:
     family: FiraMono Nerd Font Mono
     style: medium
 
-  size: 13.5
+  size: 18
 
   bold:
     family: FiraMono Nerd Font Mono
@@ -20,4 +20,4 @@ window:
 draw_bold_text_with_bright_colors: false
 use_thin_strokes: false
 import:
-  - ~/.config/alacritty/gurber-dark.yml
+  - ~/.config/alacritty/pastel-cube.yaml

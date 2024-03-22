@@ -1,0 +1,5 @@
+#!/bin/bash
+
+session=$(tmux ls  | fzf | sed 's/://g' | awk '{print $1}')
+echo $session
+tmux attach -t $session

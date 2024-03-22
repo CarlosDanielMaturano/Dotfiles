@@ -9,7 +9,9 @@ alias t="tmux"
 alias copy="xclip -selection clipboard"
 alias sel="xclip -o"
 alias ts="tmux-sessionizer"
+alias ta="tmux-attacher"
 alias fd="fdfind"
+alias info="info --vi-keys"
 
 
 function fish_title
