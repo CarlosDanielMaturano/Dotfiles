@@ -13,3 +13,5 @@ picom --config ~/.config/picom.conf &
 killall polybar
 polybar main -c ~/.config/polybar/config.ini & 
 
+
+unclutter -idle 7 & 
